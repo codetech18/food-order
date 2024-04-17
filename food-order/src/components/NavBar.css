@@ -1,0 +1,45 @@
+.nav {
+  justify-content: space-around;
+}
+
+.nav h1 {
+  color: #fa5631;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #fa5631;
+  display: block;
+  transition: 0.3s linear;
+}
+
+.nav ul li a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .nav {
+    justify-content: flex-start;
+  }
+  .nav ul {
+    display: none;
+  }
+}
