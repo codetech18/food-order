@@ -6,17 +6,22 @@ import Menu from "./components/Menu/Menu";
 import Order from "./components/Order/Order";
 import Team from "./components/Team/Team";
 import Footer from "./components/Footer/Footer";
+import { ListItemsAndTotalPriceProvider } from "./Context";
 
 const App = () => {
   return (
     <>
-      <NavBar />
-      <Hero />
-      <Deal />
-      <Menu />
-      <Order />
-      <Team />
-      <Footer />
+      <ListItemsAndTotalPriceProvider>
+        <NavBar />
+        <Hero />
+        <Deal />
+
+        <Menu />
+
+        <Order />
+        <Team />
+        <Footer />
+      </ListItemsAndTotalPriceProvider>
     </>
   );
 };

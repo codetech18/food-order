@@ -21,15 +21,15 @@ const Hero = () => {
             impedit libero magni voluptate quidem ullam reprehenderit.
           </p>
           <div className="main_btn flex items-center">
-            <a href="#">Order now</a>
+            <a href="#Menu">Order now</a>
             <i>
               <FaAngleRight />
             </i>
           </div>
         </div>
-        {/* <div className="main-image  ">
+        <div className="main-image  ">
           <img src={chef} alt="" />
-        </div> */}
+        </div>
       </div>
     </>
   );

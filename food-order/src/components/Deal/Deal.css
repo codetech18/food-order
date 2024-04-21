@@ -36,7 +36,7 @@
 .about .about_main .about_text p {
   width: 650px;
   text-align: justify;
-  margin-right: 30px;
+  /* margin-right: 30px; */
   line-height: 22px;
 }
 
@@ -66,7 +66,7 @@
   .about .about_main .about_text p {
     width: 500px;
     text-align: justify;
-    margin-right: 30px;
+    /* margin-right: 30px; */
     line-height: 22px;
   }
 
@@ -94,7 +94,7 @@
   }
   .about .about_main .about_text p {
     width: 550px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     line-height: 20px;
   }
   .about .about_btn {
@@ -111,7 +111,7 @@
   .about .about_main .about_text p {
     width: 250px;
     font-size: 15px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     line-height: 20px;
   }
   .about .about_main .about_text h3 {
@@ -133,10 +133,12 @@
     line-height: 10px;
     font-size: 10px;
   }
-
-  .about .about_main {
-    justify-content: space-between;
+  .about .about_main .image img {
+    width: 200px;
+    position: relative;
+    top: 60px;
   }
+
   .about .about_main .about_text h1 {
     font-size: 25px;
     bottom: 20px;

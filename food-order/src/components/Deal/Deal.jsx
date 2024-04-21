@@ -21,15 +21,12 @@ const Deal = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
               molestias, perferendis sed exercitationem quae nam nisi recusandae
               eligendi non consequuntur minus facilis eaque distinctio, libero
-              accusantium culpa dolores placeat. Beatae! Lorem ipsum dolor, sit
-              amet consectetur adipisicing elit. Debitis incidunt saepe eaque
-              fuga ea nostrum eos explicabo alias eum, minus qui corrupti
-              inventore, delectus tempore velit autem non repellat impedit.
+              accusantium culpa dolores placeat.
             </p>
           </div>
         </div>
 
-        <a href="#" className="about_btn">
+        <a href="#Menu" className="about_btn">
           Order Now
         </a>
       </div>

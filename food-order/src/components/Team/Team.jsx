@@ -11,7 +11,7 @@ import "./Team.css";
 const Team = () => {
   return (
     <>
-      <div className="team">
+      <div className="team" id="Team">
         <h1>
           Our <span>Chefs</span>
         </h1>

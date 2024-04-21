@@ -25,10 +25,10 @@ const NavBar = () => {
           </li>
 
           <li className="inline-block my-0 mx-4">
-            <a href="#Review">Review</a>
+            <a href="#Order">Order</a>
           </li>
           <li className="inline-block my-0 mx-4">
-            <a href="#Order">Order</a>
+            <a href="#Team">Team</a>
           </li>
         </ul>
       </div>

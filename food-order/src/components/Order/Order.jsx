@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Order.css";
 import order from "../../assets/image/order_image.png";
 import axios from "axios";
+import { useListItemsAndTotalPrice } from "../../Context";
 
 const Order = () => {
   const [email, setEmail] = useState();
@@ -10,11 +11,13 @@ const Order = () => {
   const [order1, setOrder] = useState();
   const [table, setTable] = useState();
 
+  const { listItemsAndTotalPrice } = useListItemsAndTotalPrice(); // Access the context
+
   const sendMail = () => {
     const formData = {
       email,
       subject,
-      message,
+      message: listItemsAndTotalPrice(), // Get list items and total price
       order1,
       table,
     };
@@ -86,10 +89,11 @@ const Order = () => {
             </div>
             <div className="input">
               <p>Your Order</p>
-              <input
+              <textarea
                 placeholder="Food name"
                 id="last"
-                onChange={(e) => setMessage(e.target.value)}
+                value={listItemsAndTotalPrice()} // Display list items and total price
+                readOnly // Make the textarea read-only
               />
             </div>
             <div className="input">

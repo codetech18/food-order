@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Menu.css";
 import burger from "../../assets/image/buger.jpg";
 import { FaHeart } from "react-icons/fa";
@@ -21,11 +21,34 @@ import food3 from "../../assets/image/gallary_3.jpg";
 import food4 from "../../assets/image/gallary_4.jpg";
 import food5 from "../../assets/image/gallary_5.jpg";
 import food6 from "../../assets/image/gallary_6.jpg";
+import Order from "../Order/Order";
 
 const Menu = () => {
+  const [orderItem, setOrderItem] = useState([]);
+
+  const addToOrder = (itemName, itemPrice) => {
+    setOrderItem([...orderItem, { name: itemName, price: itemPrice }]);
+  };
+  const logOrder = () => {
+    console.log(orderItem);
+  };
+
+  const listItemsAndTotalPrice = () => {
+    let totalPrice = 0;
+    let itemsList = "";
+
+    orderItem.forEach((item) => {
+      itemsList += `${item.name}: $${item.price}\n`; // Concatenating name and price
+      totalPrice += parseFloat(item.price.replace("$", ""));
+    });
+
+    itemsList += `Total Price: $${totalPrice.toFixed(2)}`; // Adding total price
+    return totalPrice;
+  };
+
   return (
     <>
-      <div className="menu w-full py-16 px-0" id="menu">
+      <div className="menu w-full py-16 px-0" id="Menu">
         <h1 className="text-8xl flex italic  justify-center mt-32 mb-12 items-center ">
           Our <span className=" ml-4  underline">Menu</span>
         </h1>
@@ -66,8 +89,13 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("Burger", "$20.00"); // Corrected position for console.log
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -106,8 +134,13 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("Sandwich", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -146,8 +179,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("cake", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -186,8 +225,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("pasta", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -226,8 +271,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("HotDog", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -266,8 +317,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("lasagna", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -306,8 +363,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("iceCream", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -346,8 +409,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("pizza", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -386,8 +455,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("Juice", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -426,8 +501,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("biryani", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -466,8 +547,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("chocoDrink", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -506,8 +593,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("chocolate", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -546,8 +639,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("Bread", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -563,7 +662,7 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Burger</h2>
+              <h2>CupCake</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Accusantium, rem.
@@ -586,8 +685,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("blueberryCake", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -603,7 +708,7 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Burger</h2>
+              <h2>cupCake</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Accusantium, rem.
@@ -626,8 +731,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("ChoclateCake", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -643,7 +754,7 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Burger</h2>
+              <h2>Bread</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Accusantium, rem.
@@ -666,7 +777,13 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("Bread", "$20.00");
+                }}
+              >
                 Order Now
               </a>
             </div>
@@ -683,7 +800,7 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Burger</h2>
+              <h2>Pizza</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Accusantium, rem.
@@ -706,8 +823,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("Pizza", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -723,7 +846,7 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Burger</h2>
+              <h2>PanCake</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Accusantium, rem.
@@ -746,8 +869,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("Pancake", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -786,8 +915,14 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("burger", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
@@ -826,11 +961,27 @@ const Menu = () => {
                   <IoMdStarHalf />
                 </i>
               </div>
-              <a href="#" className="menu_btn">
-                Order Now
+              <a
+                href="#"
+                className="menu_btn"
+                onClick={() => {
+                  addToOrder("Pancake", "$20.00");
+                }}
+              >
+                Add To Order
               </a>
             </div>
           </div>
+
+          <button
+            className="button"
+            onClick={() => {
+              logOrder();
+              listItemsAndTotalPrice();
+            }}
+          >
+            Proceed to Order
+          </button>
         </div>
       </div>
     </>
