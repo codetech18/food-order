@@ -3,6 +3,19 @@ import "./Order.css";
 import order from "../../assets/image/order_image.png";
 import axios from "axios";
 import { useListItemsAndTotalPrice } from "../../Context";
+import { useOrder } from "../../Context2";
+
+// Define the DisplayOrderItems component
+const DisplayOrderItems = ({ formattedItems, totalPrice }) => {
+  return (
+    <textarea
+      placeholder="Food name"
+      id="last"
+      value={`${formattedItems}\nTotal Price: ${totalPrice}`}
+      readOnly // Make the textarea read-only
+    />
+  );
+};
 
 const Order = () => {
   const [email, setEmail] = useState();
@@ -12,12 +25,30 @@ const Order = () => {
   const [table, setTable] = useState();
 
   const { listItemsAndTotalPrice } = useListItemsAndTotalPrice(); // Access the context
+  const { orderItem } = useOrder(); // Access the order state using the useOrder hook
+
+  const formatOrderItems = () => {
+    return orderItem.map((item) => `${item.name}: ${item.price}`).join("\n");
+  };
+
+  // Function to calculate the total price of all items in the order
+  const calculateTotalPrice = () => {
+    let totalPrice = 0;
+    orderItem.forEach((item) => {
+      totalPrice += parseFloat(item.price.replace("$", ""));
+    });
+    return totalPrice.toFixed(2); // Return the total price with two decimal places
+  };
+
+  // Calculate formatted items and total price
+  const formattedItems = formatOrderItems();
+  const totalPrice = calculateTotalPrice();
 
   const sendMail = () => {
     const formData = {
       email,
       subject,
-      message: listItemsAndTotalPrice(), // Get list items and total price
+      message: `\n${formattedItems}\n<br>Total Price: ${totalPrice}`, // Get list items and total price
       order1,
       table,
     };
@@ -35,7 +66,7 @@ const Order = () => {
   };
 
   var Popup = () => {
-    window.alert("submitted");
+    window.alert("Your Order has been taken you'll be attended to shortly ");
   };
 
   return (
@@ -89,11 +120,10 @@ const Order = () => {
             </div>
             <div className="input">
               <p>Your Order</p>
-              <textarea
-                placeholder="Food name"
-                id="last"
-                value={listItemsAndTotalPrice()} // Display list items and total price
-                readOnly // Make the textarea read-only
+              {/* Render the DisplayOrderItems component */}
+              <DisplayOrderItems
+                formattedItems={formattedItems}
+                totalPrice={totalPrice}
               />
             </div>
             <div className="input">
@@ -101,7 +131,13 @@ const Order = () => {
               <input placeholder="your Address" id="" /> */}
             </div>
 
-            <a href="#" className="order_btn" onClick={sendMail}>
+            <a
+              className="order_btn"
+              onClick={() => {
+                sendMail();
+                Popup();
+              }}
+            >
               Order Now
             </a>
           </form>

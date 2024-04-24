@@ -68,7 +68,7 @@
 
 .order .order_main form textarea {
   width: 300px;
-  height: 35px;
+  height: auto;
   padding: 5px 10px;
   border: 2px solid #cccccc;
   background: #eeeeee;

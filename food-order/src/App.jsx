@@ -7,20 +7,21 @@ import Order from "./components/Order/Order";
 import Team from "./components/Team/Team";
 import Footer from "./components/Footer/Footer";
 import { ListItemsAndTotalPriceProvider } from "./Context";
+import { OrderProvider } from "./Context2";
 
 const App = () => {
   return (
     <>
       <ListItemsAndTotalPriceProvider>
-        <NavBar />
-        <Hero />
-        <Deal />
-
-        <Menu />
-
-        <Order />
-        <Team />
-        <Footer />
+        <OrderProvider>
+          <NavBar />
+          <Hero />
+          <Deal />
+          <Menu />
+          <Order />
+          <Team />
+          <Footer />
+        </OrderProvider>
       </ListItemsAndTotalPriceProvider>
     </>
   );

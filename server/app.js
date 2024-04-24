@@ -28,6 +28,7 @@ function sendEmail({ email, subject, message, table, order1 }) {
       to: email,
       subject: subject + " Order",
       html: `
+      <h2>Here is your order details </h2>
       <p>Your order: ${message} </p>
       <p>Table number: ${table} </p>
       <p>Amount of order: ${order1} </p>

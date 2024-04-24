@@ -7,6 +7,9 @@ export const useListItemsAndTotalPrice = () =>
 
 export const ListItemsAndTotalPriceProvider = ({ children }) => {
   const [orderItem, setOrderItem] = useState([]); // State for storing order items
+  const addToOrder = (itemName, itemPrice) => {
+    setOrderItem([...orderItem, { name: itemName, price: itemPrice }]);
+  };
 
   const listItemsAndTotalPrice = () => {
     let totalPrice = 0;
@@ -23,7 +26,7 @@ export const ListItemsAndTotalPriceProvider = ({ children }) => {
 
   return (
     <ListItemsAndTotalPriceContext.Provider
-      value={{ listItemsAndTotalPrice, setOrderItem }}
+      value={{ listItemsAndTotalPrice, setOrderItem, orderItem }}
     >
       {children}
     </ListItemsAndTotalPriceContext.Provider>

@@ -21,17 +21,24 @@ import food3 from "../../assets/image/gallary_3.jpg";
 import food4 from "../../assets/image/gallary_4.jpg";
 import food5 from "../../assets/image/gallary_5.jpg";
 import food6 from "../../assets/image/gallary_6.jpg";
-import Order from "../Order/Order";
+import { useOrder } from "../../Context2";
 
 const Menu = () => {
-  const [orderItem, setOrderItem] = useState([]);
+  const { orderItem, addToOrder } = useOrder();
 
-  const addToOrder = (itemName, itemPrice) => {
-    setOrderItem([...orderItem, { name: itemName, price: itemPrice }]);
+  const handleAddToOrder = (itemName, itemPrice) => {
+    addToOrder(itemName, itemPrice);
+    alert("added to order");
+    // Additional logic if needed
   };
-  const logOrder = () => {
-    console.log(orderItem);
-  };
+  // const [orderItem, setOrderItem] = useState([]);
+
+  // const addToOrder = (itemName, itemPrice) => {
+  //   setOrderItem([...orderItem, { name: itemName, price: itemPrice }]);
+  // };
+  // const logOrder = () => {
+  //   console.log(orderItem);
+  // };
 
   const listItemsAndTotalPrice = () => {
     let totalPrice = 0;
@@ -91,9 +98,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("Burger", "$20.00"); // Corrected position for console.log
-                }}
+                onClick={() => handleAddToOrder("Burger", "$20.00")}
               >
                 Add To Order
               </a>
@@ -136,9 +141,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("Sandwich", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Sandwich", "$20.00")}
               >
                 Add To Order
               </a>
@@ -180,11 +183,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("cake", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Cake", "$20.00")}
               >
                 Add To Order
               </a>
@@ -226,11 +226,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("pasta", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Pasta", "$20.00")}
               >
                 Add To Order
               </a>
@@ -272,11 +269,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("HotDog", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("HotDog", "$20.00")}
               >
                 Add To Order
               </a>
@@ -318,11 +312,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("lasagna", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Lasagna", "$20.00")}
               >
                 Add To Order
               </a>
@@ -364,11 +355,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("iceCream", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Ice Cream", "$20.00")}
               >
                 Add To Order
               </a>
@@ -410,11 +398,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("pizza", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Pizza", "$20.00")}
               >
                 Add To Order
               </a>
@@ -456,11 +441,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("Juice", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Juice", "$20.00")}
               >
                 Add To Order
               </a>
@@ -502,11 +484,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("biryani", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Biryani", "$20.00")}
               >
                 Add To Order
               </a>
@@ -548,11 +527,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("chocoDrink", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Choclate Drink", "$20.00")}
               >
                 Add To Order
               </a>
@@ -594,11 +570,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("chocolate", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Chocolate", "$20.00")}
               >
                 Add To Order
               </a>
@@ -640,11 +613,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("Bread", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Bread", "$20.00")}
               >
                 Add To Order
               </a>
@@ -686,11 +656,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("blueberryCake", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Blueberry Cake", "$20.00")}
               >
                 Add To Order
               </a>
@@ -732,11 +699,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("ChoclateCake", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Chocolate", "$20.00")}
               >
                 Add To Order
               </a>
@@ -778,11 +742,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("Bread", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Bread", "$20.00")}
               >
                 Order Now
               </a>
@@ -824,11 +785,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("Pizza", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Pizza", "$20.00")}
               >
                 Add To Order
               </a>
@@ -870,11 +828,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("Pancake", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Pancake", "$20.00")}
               >
                 Add To Order
               </a>
@@ -916,11 +871,8 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("burger", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Burger", "$20.00")}
               >
                 Add To Order
               </a>
@@ -962,25 +914,16 @@ const Menu = () => {
                 </i>
               </div>
               <a
-                href="#"
                 className="menu_btn"
-                onClick={() => {
-                  addToOrder("Pancake", "$20.00");
-                }}
+                onClick={() => handleAddToOrder("Burger", "$20.00")}
               >
                 Add To Order
               </a>
             </div>
           </div>
 
-          <button
-            className="button"
-            onClick={() => {
-              logOrder();
-              listItemsAndTotalPrice();
-            }}
-          >
-            Proceed to Order
+          <button className="button">
+            <a href="#Order">Proceed to Order</a>
           </button>
         </div>
       </div>
