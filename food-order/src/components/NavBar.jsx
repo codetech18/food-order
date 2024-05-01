@@ -4,7 +4,7 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <>
-      <div className=" nav flex h-16 items-center sticky right-0 left-0 bg-white shadow-lg">
+      <div className=" nav flex justify-around h-16 w-full items-center sticky right-0 left-0 bg-white shadow-lg">
         <a href="/">
           {/* <img className="w-24 cursor-pointer m-7" src={logo} alt="Logo" /> */}
           <h1 className="w-24 text-3xl italic font-semibold cursor-pointer m-7">

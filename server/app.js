@@ -26,12 +26,13 @@ function sendEmail({ email, subject, message, table, order1 }) {
     const mail_configs = {
       from: "codetech18@gmail.com",
       to: email,
-      subject: subject + " Order",
+      subject: subject + "'s Order",
       html: `
-      <h2>Here is your order details </h2>
-      <p>Your order: ${message} </p>
+      <h1>Order Summary </h1>
       <p>Table number: ${table} </p>
-      <p>Amount of order: ${order1} </p>
+      <p>additional notes/allergies: ${order1} </p>
+      <h2>Your order: </h2>
+      <p>${message}</pl>
        `,
     };
 

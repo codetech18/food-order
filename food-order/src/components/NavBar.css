@@ -36,8 +36,8 @@
 }
 
 @media (max-width: 480px) {
-  .nav {
-    justify-content: flex-start;
+  .nav h1 {
+    margin-right: 15rem;
   }
   .nav ul {
     display: none;

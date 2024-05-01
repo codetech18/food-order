@@ -11,7 +11,7 @@ const DisplayOrderItems = ({ formattedItems, totalPrice }) => {
     <textarea
       placeholder="Food name"
       id="last"
-      value={`${formattedItems}\nTotal Price: ${totalPrice}`}
+      value={`${formattedItems}\nTotal Price: $${totalPrice}`}
       readOnly // Make the textarea read-only
     />
   );
@@ -48,7 +48,7 @@ const Order = () => {
     const formData = {
       email,
       subject,
-      message: `\n${formattedItems}\n<br>Total Price: ${totalPrice}`, // Get list items and total price
+      message: `\n${formattedItems}\n<br>Total Price: $${totalPrice}`, // Get list items and total price
       order1,
       table,
     };
@@ -110,10 +110,10 @@ const Order = () => {
               />
             </div>
             <div className="input">
-              <p>How Much</p>
+              <p>Allergies/message for the chef</p>
               <input
-                type="number"
-                placeholder="Amount of order"
+                type="text"
+                placeholder="Any additional message? "
                 id=""
                 onChange={(e) => setOrder(e.target.value)}
               />

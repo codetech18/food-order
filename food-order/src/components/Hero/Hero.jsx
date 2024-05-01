@@ -16,12 +16,14 @@ const Hero = () => {
             an easy way
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-            sapiente tempora. A, neque iste aperiam molestiae error beatae hic
-            impedit libero magni voluptate quidem ullam reprehenderit.
+            Welcome to FOODco. for culinary delights. Browse our mouthwatering
+            menu, place your order effortlessly, and let us handle the rest.
+            Experience the world of creativity, Without compromsing on flavor.
+            Your Next delicious meal is just a few clicks away. Start ordering
+            now and taste the convenience!!!
           </p>
           <div className="main_btn flex items-center">
-            <a href="#Menu">Order now</a>
+            <a href="#Menu">Menu</a>
             <i>
               <FaAngleRight />
             </i>

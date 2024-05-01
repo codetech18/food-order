@@ -18,10 +18,10 @@ const Deal = () => {
             </h1>
             <h3>Why choose This ?</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              molestias, perferendis sed exercitationem quae nam nisi recusandae
-              eligendi non consequuntur minus facilis eaque distinctio, libero
-              accusantium culpa dolores placeat.
+              We are happy to announce new dish (Ramen Noodles) to the menu, if
+              you buy the Ramen Noodles, you'd get a free yogurt Smoothie. Enjoy
+              our new intercontinental dish featuring ramen noodles, eggs,
+              vegetables and other spice.
             </p>
           </div>
         </div>

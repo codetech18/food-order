@@ -4,23 +4,25 @@ import burger from "../../assets/image/buger.jpg";
 import { FaHeart } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { IoMdStarHalf } from "react-icons/io";
-import cake from "../../assets/image/cake.jpg";
+import cake from "../../assets/image/spag.jpg";
 import sandwich from "../../assets/image/sandwich.jpg";
 import pasta from "../../assets/image/pasta.jpg";
 import Hot_dog from "../../assets/image/Hot_dog.jpg";
-import lasagna from "../../assets/image/lasagna.webp";
-import ice_cream from "../../assets/image/ice_cream.jpg";
+import lasagna from "../../assets/image/Africa dishes and recipes.jpg";
+import ice_cream from "../../assets/image/Delicious vegetable yam porridge.jpg";
 import pizza from "../../assets/image/pizza.jpg";
 import juse from "../../assets/image/juse.jpg";
 import biryani from "../../assets/image/biryani.webp";
-import chocolate_drink from "../../assets/image/chocolate_Drink.jpg";
-import chocolate from "../../assets/image/chocolate.jpg";
-import food1 from "../../assets/image/gallary_1.jpg";
-import food2 from "../../assets/image/gallary_2.jpg";
-import food3 from "../../assets/image/gallary_3.jpg";
-import food4 from "../../assets/image/gallary_4.jpg";
-import food5 from "../../assets/image/gallary_5.jpg";
-import food6 from "../../assets/image/gallary_6.jpg";
+import chocolate_drink from "../../assets/image/Fish pepper soup.jpg";
+import chocolate from "../../assets/image/Unknown.jpg";
+import food1 from "../../assets/image/1.jpg";
+import food2 from "../../assets/image/zobo.jpeg";
+import food3 from "../../assets/image/Orange.jpeg";
+import food4 from "../../assets/image/Strawberry.jpeg";
+import food5 from "../../assets/image/4.jpg";
+import food6 from "../../assets/image/pancakes.jpeg";
+import chicken from "../../assets/image/combo1.jpeg";
+import shawarma from "../../assets/image/shawarma.jpeg";
 import { useOrder } from "../../Context2";
 
 const Menu = () => {
@@ -31,14 +33,6 @@ const Menu = () => {
     alert("added to order");
     // Additional logic if needed
   };
-  // const [orderItem, setOrderItem] = useState([]);
-
-  // const addToOrder = (itemName, itemPrice) => {
-  //   setOrderItem([...orderItem, { name: itemName, price: itemPrice }]);
-  // };
-  // const logOrder = () => {
-  //   console.log(orderItem);
-  // };
 
   const listItemsAndTotalPrice = () => {
     let totalPrice = 0;
@@ -75,10 +69,10 @@ const Menu = () => {
             <div className="menu_info">
               <h2>Burger</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                Enjoy the classic burger with beef patty, melted cheese,and
+                other, served on a toasted sesame seed bun.
               </p>
-              <h3>$20.00</h3>
+              <h3>$10.00</h3>
               <div class="menu_icon flex justify-center">
                 <i>
                   <FaStar />
@@ -98,7 +92,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Burger", "$20.00")}
+                onClick={() => handleAddToOrder("Burger", "$10.00")}
               >
                 Add To Order
               </a>
@@ -116,12 +110,12 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Sandwhich</h2>
+              <h2>Grilled Chicken Salad</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                Tender grilled chicken breast slices atop a bed of romaine
+                lettuce, tossed with cheese, croutons, and creamy dressing.
               </p>
-              <h3>$20.00</h3>
+              <h3>$12.00</h3>
               <div class="menu_icon flex justify-center">
                 <i>
                   <FaStar />
@@ -141,7 +135,9 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Sandwich", "$20.00")}
+                onClick={() =>
+                  handleAddToOrder("Grilled Chicken Salad", "$12.00")
+                }
               >
                 Add To Order
               </a>
@@ -159,10 +155,10 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Cake</h2>
+              <h2>Spaghetti Bolognese</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                Spaghetti noodles smothered in a meaty Bolognese sauce made with
+                beef, tomatoes, onions, and aromatic herbs.
               </p>
               <h3>$20.00</h3>
               <div class="menu_icon flex justify-center">
@@ -184,7 +180,9 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Cake", "$20.00")}
+                onClick={() =>
+                  handleAddToOrder("Spaghetti Bolognese", "$20.00")
+                }
               >
                 Add To Order
               </a>
@@ -202,12 +200,12 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Pasta</h2>
+              <h2>Jollof Rice</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                Nigerian-style jollof rice cooked in a flavorful tomato sauce
+                with other spices, served with grilled chicken pieces.
               </p>
-              <h3>$20.00</h3>
+              <h3>$25.00</h3>
               <div class="menu_icon flex justify-center">
                 <i>
                   <FaStar />
@@ -227,7 +225,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Pasta", "$20.00")}
+                onClick={() => handleAddToOrder("Jollof Rice", "$25.00")}
               >
                 Add To Order
               </a>
@@ -245,12 +243,12 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>HotDog</h2>
+              <h2>White rice and Special sauce</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                Enjoy our white rice with special sauce made with tomato sauce,
+                beef and other ingredients.
               </p>
-              <h3>$20.00</h3>
+              <h3>$10.00</h3>
               <div class="menu_icon flex justify-center">
                 <i>
                   <FaStar />
@@ -270,7 +268,9 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("HotDog", "$20.00")}
+                onClick={() =>
+                  handleAddToOrder("White rice and Special sauce", "$10.00")
+                }
               >
                 Add To Order
               </a>
@@ -288,12 +288,12 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Lasagna</h2>
+              <h2>Ewedu and amala special</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                A traditional Nigerian dish featuring Ewedu soup along with
+                gbegiri with assorted meats, served with hot Amala.
               </p>
-              <h3>$20.00</h3>
+              <h3>$30.00</h3>
               <div class="menu_icon flex justify-center">
                 <i>
                   <FaStar />
@@ -313,7 +313,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Lasagna", "$20.00")}
+                onClick={() => handleAddToOrder("Ewedu and amala", "$30.00")}
               >
                 Add To Order
               </a>
@@ -331,10 +331,10 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>IceCream</h2>
+              <h2>Yam Pottage</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                A comforting dish made with chicken, yam, tomatoes, peppers, and
+                spices, slow-cooked into a delicious one-pot meal.
               </p>
               <h3>$20.00</h3>
               <div class="menu_icon flex justify-center">
@@ -356,7 +356,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Ice Cream", "$20.00")}
+                onClick={() => handleAddToOrder("Yam Pottage", "$20.00")}
               >
                 Add To Order
               </a>
@@ -374,10 +374,10 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Pizza</h2>
+              <h2>Margherita Pizza</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                A traditional italian delight with a thin crust topped with rich
+                tomato sauce, fresh chesse, and basil leaves.
               </p>
               <h3>$20.00</h3>
               <div class="menu_icon flex justify-center">
@@ -417,10 +417,10 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Juice</h2>
+              <h2>Chapman Cocktail</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                A refreshing Nigerian cocktail made with Fanta, Sprite,
+                Angostura bitters, grenadine syrup, and lemon slices .
               </p>
               <h3>$20.00</h3>
               <div class="menu_icon flex justify-center">
@@ -442,7 +442,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Juice", "$20.00")}
+                onClick={() => handleAddToOrder("Chapman Cocktail", "$20.00")}
               >
                 Add To Order
               </a>
@@ -462,8 +462,8 @@ const Menu = () => {
             <div className="menu_info">
               <h2>Biryani</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                Enjoy our aromatic south asian dish made with rice, spices and
+                chicken, and vegetables.
               </p>
               <h3>$20.00</h3>
               <div class="menu_icon flex justify-center">
@@ -503,10 +503,10 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Choco</h2>
+              <h2>Fish pepper soup</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                Enjoy our spicy pepper soup made with catfish and spices for
+                that tingling sensation.
               </p>
               <h3>$20.00</h3>
               <div class="menu_icon flex justify-center">
@@ -528,7 +528,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Choclate Drink", "$20.00")}
+                onClick={() => handleAddToOrder("Fish pepper soup", "$20.00")}
               >
                 Add To Order
               </a>
@@ -546,10 +546,10 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Chocolate</h2>
+              <h2>English Breakfast</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                Enjoy our special english breakfast featuring eggs, bacon,
+                sausage, toast, beans and mushrooms.
               </p>
               <h3>$20.00</h3>
               <div class="menu_icon flex justify-center">
@@ -571,7 +571,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Chocolate", "$20.00")}
+                onClick={() => handleAddToOrder("English Breakfast", "$20.00")}
               >
                 Add To Order
               </a>
@@ -589,10 +589,10 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Bread</h2>
+              <h2>Ofada Special</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                Enjoy our Ofada rice (local rice) with special sauce made with
+                beef and spices to make you feel that Nigerian groove.
               </p>
               <h3>$20.00</h3>
               <div class="menu_icon flex justify-center">
@@ -614,7 +614,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Bread", "$20.00")}
+                onClick={() => handleAddToOrder("Ofada Special", "$20.00")}
               >
                 Add To Order
               </a>
@@ -632,10 +632,10 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>CupCake</h2>
+              <h2>Zobo Drink</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                A traditional Nigerian hibiscus drink infused with ginger,
+                pineapple and spices, served chilled.
               </p>
               <h3>$20.00</h3>
               <div class="menu_icon flex justify-center">
@@ -657,7 +657,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Blueberry Cake", "$20.00")}
+                onClick={() => handleAddToOrder("Zobo Drink", "$20.00")}
               >
                 Add To Order
               </a>
@@ -675,10 +675,10 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>cupCake</h2>
+              <h2>Chivita Orange Juice</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                Enjoy your meal with Freshly squeezed orange juice packed with
+                vitamins and natural goodness.
               </p>
               <h3>$20.00</h3>
               <div class="menu_icon flex justify-center">
@@ -700,7 +700,9 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Chocolate", "$20.00")}
+                onClick={() =>
+                  handleAddToOrder("Chivita Orange Juice", "$20.00")
+                }
               >
                 Add To Order
               </a>
@@ -718,10 +720,10 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Bread</h2>
+              <h2>Yogurt Smoothie</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                Enjoy your meal with Creamy yogurt blended with fresh fruits
+                like strawberries, bananas, and honey.
               </p>
               <h3>$20.00</h3>
               <div class="menu_icon flex justify-center">
@@ -743,7 +745,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Bread", "$20.00")}
+                onClick={() => handleAddToOrder("Yogurt Smoothie", "$20.00")}
               >
                 Order Now
               </a>
@@ -761,10 +763,10 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Pizza</h2>
+              <h2>Ramen Noodles</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                Enjoy our new intercontinental dish featuring ramen noodles,
+                eggs, vegetables and other spice.
               </p>
               <h3>$20.00</h3>
               <div class="menu_icon flex justify-center">
@@ -786,7 +788,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Pizza", "$20.00")}
+                onClick={() => handleAddToOrder("Ramen Noodles", "$20.00")}
               >
                 Add To Order
               </a>
@@ -806,10 +808,11 @@ const Menu = () => {
             <div className="menu_info">
               <h2>PanCake</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                Fluffy golden brown, pancakes are a classic breakfast option.
+                Served with syrup, butter, they're a delightful treat to start
+                your day.
               </p>
-              <h3>$20.00</h3>
+              <h3>$10.00</h3>
               <div class="menu_icon flex justify-center">
                 <i>
                   <FaStar />
@@ -829,7 +832,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Pancake", "$20.00")}
+                onClick={() => handleAddToOrder("Pancake", "$10.00")}
               >
                 Add To Order
               </a>
@@ -837,7 +840,7 @@ const Menu = () => {
           </div>
           <div className="menu_card w-80 pt-2 mb-5">
             <div className="menu_image ">
-              <img src={burger} alt="" />
+              <img src={chicken} alt="" />
             </div>
 
             <div className="small_card">
@@ -847,12 +850,12 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Burger</h2>
+              <h2>Chicken and Chips</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                A hearty meal featuring tender chicken cooked to perfection
+                alongside crispy golden fries.
               </p>
-              <h3>$20.00</h3>
+              <h3>$16.00</h3>
               <div class="menu_icon flex justify-center">
                 <i>
                   <FaStar />
@@ -872,7 +875,7 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Burger", "$20.00")}
+                onClick={() => handleAddToOrder("Chicken and Chips", "$16.00")}
               >
                 Add To Order
               </a>
@@ -880,7 +883,7 @@ const Menu = () => {
           </div>
           <div className="menu_card w-80 pt-2 mb-5">
             <div className="menu_image ">
-              <img src={burger} alt="" />
+              <img src={shawarma} alt="" />
             </div>
 
             <div className="small_card">
@@ -890,12 +893,13 @@ const Menu = () => {
             </div>
 
             <div className="menu_info">
-              <h2>Burger</h2>
+              <h2>Shawarma</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium, rem.
+                shawarma is a delicious wrap filled with thinly sliced meat,
+                vegetables, and flavorful sauces, Perfectly seasoned and
+                grilled.
               </p>
-              <h3>$20.00</h3>
+              <h3>$5.00</h3>
               <div class="menu_icon flex justify-center">
                 <i>
                   <FaStar />
@@ -915,13 +919,14 @@ const Menu = () => {
               </div>
               <a
                 className="menu_btn"
-                onClick={() => handleAddToOrder("Burger", "$20.00")}
+                onClick={() => handleAddToOrder("Shawarma", "$5.00")}
               >
                 Add To Order
               </a>
             </div>
           </div>
-
+        </div>
+        <div className="button1">
           <button className="button">
             <a href="#Order">Proceed to Order</a>
           </button>

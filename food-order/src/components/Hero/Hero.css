@@ -11,7 +11,7 @@
 }
 
 .main .main-text p {
-  width: 45rem;
+  width: 40rem;
   margin-top: 3rem;
   padding-left: 20px;
 }
@@ -99,8 +99,7 @@
 
 @media (max-width: 480px) {
   .main .main-image {
-    top: 3rem;
-    position: relative;
+    display: none;
   }
 
   .main .main-image img {

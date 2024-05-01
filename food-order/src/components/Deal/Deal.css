@@ -11,7 +11,7 @@
 }
 
 .about .about_main .image img {
-  width: 600px;
+  width: 500px;
   position: relative;
   top: 60px;
 }
@@ -51,8 +51,12 @@
 }
 
 @media (max-width: 1280px) {
+  .about {
+    height: 50vh;
+  }
+
   .about .about_main .image img {
-    width: 400px;
+    width: 350px;
     position: relative;
     top: 120px;
   }
@@ -64,7 +68,7 @@
   }
 
   .about .about_main .about_text p {
-    width: 500px;
+    width: 400px;
     text-align: justify;
     /* margin-right: 30px; */
     line-height: 22px;
@@ -78,7 +82,6 @@
 @media (max-width: 834px) {
   .about {
     margin-top: 100px;
-    height: 80vh;
   }
   .about .about_main .image img {
     width: 300px;
@@ -93,7 +96,7 @@
     font-size: 25px;
   }
   .about .about_main .about_text p {
-    width: 550px;
+    width: 350px;
     /* margin-right: 20px; */
     line-height: 20px;
   }
@@ -106,7 +109,7 @@
 @media (max-width: 768px) {
   .about {
     margin-top: 100px;
-    height: 80vh;
+    height: 5 0vh;
   }
   .about .about_main .about_text p {
     width: 250px;
@@ -127,14 +130,17 @@
     margin-top: 100px;
     height: 50vh;
   }
+  .about .about_main .about_text h1 {
+    font-size: 40px;
+  }
   .about .about_main .about_text p {
-    width: 200px;
+    width: 160px;
     /* margin-right: 20px; */
     line-height: 10px;
     font-size: 10px;
   }
   .about .about_main .image img {
-    width: 200px;
+    width: 150px;
     position: relative;
     top: 60px;
   }
